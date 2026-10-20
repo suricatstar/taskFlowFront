@@ -9,13 +9,21 @@ export interface Task {
   createdAt: string,
   updatedAt: string,
   createdBy?: string,
-  projectId?: string, //arrumar depois pra pegar um projeto
+  projectId?: string,
   assignedTo?: string,
 };
 
 export interface CreateTaskDTO {
   title: string,
   description?: string,
-  projectId?: string, //arrumar depois pra pegar um projeto
+  projectId?: string,
+  assignedTo?: string,
+};
+
+export interface UpdateTaskDTO {
+  title?: string,
+  description?: string,
+  status?: TaskStatus,
+  projectId?: string,
   assignedTo?: string,
 };
